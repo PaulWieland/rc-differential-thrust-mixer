@@ -13,7 +13,7 @@ The Vector does not support planes that rely on differential thrust for yaw. My 
 0. I used an [Adafruit Trinket Pro w/5v logic](https://www.adafruit.com/product/2000) (non pro version does not work!)
 0. Two pins are setup to read the PWM signal from the Vector
 0. Two pins are setup to write the PWM (in microseconds) to the ESCs
-0. When yawing left, the program calculates the % of yaw then _reduces_ the left motor by that amount.
-  0. If the throttle value is set at 50% and a 50% yaw left command is given, the program will send 50% thrust to the right motor and 25% thrust to the left motor.
-  0. Throttle = 50%, Yaw Left = 100%, Left Motor = 0%, Right Motor = 50%
-  1. Throttle = 100%, Yaw Left = 25%, Left Motor = 75%, Right Motor = 100%
+0. When yawing left, the program calculates the % of yaw then _reduces_ the left motor by that amount while _increasing_ the right motor by the same amount.
+  0. If the throttle value is set at 50% and a 50% yaw left command is given, the program will send 75% thrust to the right motor and 25% thrust to the left motor.
+  0. Throttle = 50%, Yaw Left = 100%, Left Motor = 0%, Right Motor = 100%
+  0. Throttle = 100%, Yaw Left = 25%, Left Motor = 75%, Right Motor = 100%
